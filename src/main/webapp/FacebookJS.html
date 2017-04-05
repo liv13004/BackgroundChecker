@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FacebookAPI via JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1622855924421062',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>        
+    </head>
+    <body>
+        <div>TODO write content</div>
+        
+        <div id ="fb-root"></div>
+        
+        <input type="button" value="Login" onclick="Login();" />
+        <input type="button" value="Logout" onclick="Logout();" />
+        
+        <div id ="displayName">Display Name</div>
+        <div id ="userName">User Name</div>
+        <div id ="userID">User ID</div>
+        <div id ="userEmail">User Email</div>
+        <div
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+        </div>
+        
+        
+        
+    </body>
+</html>
